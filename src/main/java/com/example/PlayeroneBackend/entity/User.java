@@ -2,14 +2,12 @@ package com.example.PlayeroneBackend.entity;
 
 import com.example.PlayeroneBackend.enums.UserRole;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "users")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -35,7 +33,6 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
-    // Player-specific fields
     private String bgmiGameId;
 
     private String bgmiInGameName;
